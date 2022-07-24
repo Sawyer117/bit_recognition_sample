@@ -1,0 +1,2 @@
+C:\Users\wen\AppData\Roaming\Ultralytics
+[34m[1mgithub: [0mskipping check (not a git repository), for updates see https://github.com/ultralytics/yolov5

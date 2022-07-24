@@ -1,0 +1,35 @@
+conda create -n yolov5 python=3.7.5
+conda activate yolov5
+conda install m2-base
+
+# navigate to work directory, then do below command step by step
+git clone https://github.com/ultralytics/yolov5
+# try Inference with detect.py
+
+
+cd yolov5
+pip install -r requirements.txt
+
+
+*understanding output
+https://github.com/ultralytics/yolov5/issues/1277#issuecomment-810458576
+the default models have 3 outputs, P3, P4, P5. You divide your image size, i.e. 640 by the P3-P5 output strides of 8, 16, 32 to arrive at grid sizes of 80x80, 40x40, 20x20. Each grid point has 3 anchors by default, and each anchor contains a vector 5+nc long, where nc is the number of classes the model has. Therefore the default model with 80 classes has 1x3x80x80x85 + 1x3x40x40x85 + 1x3x20x20x85 output points. These are flattened and reshaped into the output shape you see (16128x85), and you have 16 images in your first dimension
+
+
+
+## changed ./utils/general.py line 98:
+
+original from image(720x1280)                 x,y,w,h
+person1 : 125,194,  715,719-> 590,525   -> 125,194,590,525
+person2 : 743,50,   1143,717->400,667   -> 743,50,400,667
+tie     : 444,441   496,708 -> 52,267   -> 444,441,52,267
+tie2    : 980,313,  1025,416 -> 45,103  -> 980,313,45,103 
+
+from prediction:
+371 36 570 373  -> 371,36,199,337
+220,230,248,367 -> 220,230,28,137
+61,108,357,371  -> 61,108,296,263
+489,168,512,219 -> 489,168,23,51
+
+
+
