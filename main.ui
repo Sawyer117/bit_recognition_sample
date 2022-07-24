@@ -103,29 +103,12 @@
      <x>910</x>
      <y>300</y>
      <width>300</width>
-     <height>241</height>
+     <height>351</height>
     </rect>
    </property>
    <property name="title">
     <string>Inference Result</string>
    </property>
-   <widget class="QPlainTextEdit" name="coordinate_TextEdit">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>261</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:transparent;
-border:0</string>
-    </property>
-    <property name="plainText">
-     <string>Relative coordinates:</string>
-    </property>
-   </widget>
    <widget class="QPlainTextEdit" name="probability_TextEdit">
     <property name="geometry">
      <rect>
@@ -140,7 +123,8 @@ border:0</string>
 border:0</string>
     </property>
     <property name="plainText">
-     <string>Probability:</string>
+     <string>Object Information:
+</string>
     </property>
    </widget>
   </widget>
@@ -170,26 +154,6 @@ border:0</string>
     <string>Auto-Detection</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>720</y>
-     <width>301</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background:transparent;
-border:0</string>
-   </property>
-   <property name="readOnly">
-    <bool>true</bool>
-   </property>
-   <property name="plainText">
-    <string>Implement this along with thesis experimenting</string>
-   </property>
-  </widget>
   <widget class="QPlainTextEdit" name="ImgNameTextEdit">
    <property name="geometry">
     <rect>
@@ -207,8 +171,20 @@ border:0</string>
     <bool>true</bool>
    </property>
    <property name="plainText">
-    <string>
-</string>
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Clear_button">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>670</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear</string>
    </property>
   </widget>
  </widget>

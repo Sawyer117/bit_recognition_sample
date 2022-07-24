@@ -1,0 +1,6 @@
+path: ../customData_14042022
+train: train/images
+val: valid/images
+
+nc: 1
+names: ['bit']
