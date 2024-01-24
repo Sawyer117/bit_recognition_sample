@@ -5,7 +5,10 @@
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
-
+# H.J. Eysenck
+#Die wissenschäftliche Erforschung der Astrologie und die Förderung nach ‘naïven’ Versuchspersonen
+#Zeitschrift für Parapsychologie und Grenzgebiete der Psychologie
+#(1981)
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_BitRecognition(object):
